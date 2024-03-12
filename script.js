@@ -30,6 +30,6 @@ $(document).ready(function() {
             duration: 200,
             easing: "linear"
           });
-    });
+    }, 1000);
 });
   
