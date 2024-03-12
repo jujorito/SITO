@@ -4,7 +4,7 @@ $(document).ready(function() {
     $("#desc").hide();
     $("#text-section").hide();
 
-    $("#title").hover(function() {  
+    setTimeout(() => {
 
         $("#desc").fadeIn(200);
         $("#text-section").fadeIn(500);
