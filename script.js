@@ -4,23 +4,24 @@ $(document).ready(function() {
     $("#desc").hide();
     $("#text-section").hide();
 
-    $("#title").hover(function() {  
+    setTimeout(() => {
 
         $("#desc").fadeIn(200);
         $("#text-section").fadeIn(500);
         $(".card-section").fadeIn(500);
         $(".card").fadeIn(500);
+        $(".compass").fadeOut(3000);
 
-        var newTopTitle = $(this).height() - 450;
+        var newTopTitle = $("#title").height() - 450;
 
-        $(this).animate({
+        $("#title").animate({
             marginTop: newTopTitle + "px"
         }, {
             duration: 1000,
             easing: "swing"
         });
 
-    });
+    }, 1000);
 
     $("#title").click(function (e) { 
         e.preventDefault();

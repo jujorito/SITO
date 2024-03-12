@@ -1,5 +1,5 @@
 body {
-    background-image: url("bg.jpeg");
+    background-image: url("../Immagini/bg.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -11,10 +11,7 @@ body {
     font-family: "Lexend";
     letter-spacing: 3px;
     color: rgba(255, 255, 255, 0.9);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
     font-size: 2.5rem;
     padding: 10px;
     margin: 0;
@@ -24,6 +21,37 @@ body {
 #title:hover {
     cursor: pointer;
 }
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+    /* Impostazione della larghezza al 90% e allineamento al centro */
+    text-align: center;
+    overflow: hidden; /* Per evitare che l'effetto di sottolineatura allarghi il contenuto */
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    width: 0;
+    transform: translateX(-50%);
+    height: 2px;
+    bottom: 0;
+    left: 50%; /* Allineamento al centro */
+    background-color: #FFFFFF;
+    transform-origin: bottom;
+    border-radius: 2px;
+    transition: transform 0.25s ease-in, width 0.25s linear, box-shadow 0.1s linear;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1) translateX(-50%);
+    width: 90%;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+}
+
 
 #desc {
     margin-top: 20px;
