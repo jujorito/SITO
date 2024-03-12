@@ -4,7 +4,7 @@ $(document).ready(function() {
     $("#desc").hide();
     $("#text-section").hide();
 
-    setTimeout(() => {
+    $("#title").hover(function() {  
 
         $("#desc").fadeIn(200);
         $("#text-section").fadeIn(500);
@@ -30,6 +30,6 @@ $(document).ready(function() {
             duration: 200,
             easing: "linear"
           });
-    }, 1000);
+    });
 });
   
